@@ -1,4 +1,4 @@
-import "../../noahtech/src/styles/global.css";
+import "./styles/global.css";
 
 import Navbar    from "./components/Navbar";
 import Hero      from "./components/Hero";
