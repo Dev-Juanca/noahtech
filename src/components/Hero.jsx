@@ -105,7 +105,7 @@ export default function Hero() {
           alignItems: "left",
           }}>
           <video
-            src="../public/promo.mp4"
+            src="/promo.mp4"
             controls
             loop
             playsInline
