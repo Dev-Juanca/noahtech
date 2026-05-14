@@ -1,5 +1,6 @@
 import { NAV_LINKS } from "../data";
 import { colors, fonts } from "../styles/theme";
+import AdminPanel from "./AdminPanel";
 
 export default function Footer() {
   return (
@@ -16,9 +17,7 @@ export default function Footer() {
     >
       {/* Brand */}
       <div>
-        <div style={{ fontFamily: fonts.serif, fontSize: "1.2rem", marginBottom: "0.4rem" }}>
-          Noah<span style={{ color: colors.accent }}>.</span>
-        </div>
+        <img src="/logo.png" alt="Noah Tech" style={{ height: "36px", objectFit: "contain", marginBottom: "0.4rem" }} />
         <div
           style={{
             fontFamily: fonts.mono,
@@ -31,8 +30,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Nav links */}
-      <div style={{ display: "flex", gap: "2rem" }}>
+      {/* Nav links + Admin */}
+      <div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
         {NAV_LINKS.map((link) => (
           <a
             key={link.label}
@@ -48,6 +47,7 @@ export default function Footer() {
             {link.label}
           </a>
         ))}
+        <AdminPanel />
       </div>
     </footer>
   );
